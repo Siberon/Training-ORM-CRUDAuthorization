@@ -1,7 +1,7 @@
 const express = require('express'),
     cors = require('cors'),
     bodyParser = require('body-parser'),
-    router = require('./routers')
+    router = require('./routes/routers')
 
 const createServer = async () => {
     const app = express();
@@ -12,7 +12,7 @@ const createServer = async () => {
     app.use('/api', router)
 
     app.get('*', (_, res) => res.status(404).json({
-        'message' : 'are you lose mf?'
+        'message' : 'are you lost mf?'
     }))
 
     return app

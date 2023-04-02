@@ -1,7 +1,7 @@
 const express = require("express"),
 	router = express.Router(),
-	userController = require("./controllers/userController"),
-	checkToken = require("./middleware/checkToken");
+	userController = require("../controllers/userController"),
+	checkToken = require("../middleware/checkToken");
 
 router.get("/", (_, res) =>
 	res.status(200).json({
